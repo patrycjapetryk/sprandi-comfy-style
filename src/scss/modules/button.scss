@@ -1,0 +1,24 @@
+@import '../variables';
+@import '../mixins';
+
+.button {
+  font-size: 11px;
+  font-weight: normal;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  color: $black;
+  padding: 18px 64px;
+  border: 1px solid $black;
+  border-radius: 50%;
+  margin-top: 70px;
+  display: inline-block;
+
+  @media (max-width: $breakpoint-mobile-width) {
+    font-size: 9px;
+    padding: 12px 48px;
+  }
+
+  &__container {
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,50 @@
+@import 'variables';
+@import 'mixins';
+
+@import 'modules/animated-text.scss';
+@import 'modules/article.scss';
+@import 'modules/background.scss';
+@import 'modules/button.scss';
+@import 'modules/carousel.scss';
+@import 'modules/gallery.scss';
+@import 'modules/header.scss';
+@import 'modules/small-title.scss';
+@import 'modules/title.scss';
+@import 'modules/kids.scss';
+@import 'modules/rules.scss';
+@import 'modules/video.scss';
+
+.main {
+  color: $black;
+  font-family: Gordita, Arial, sans-serif;
+  font-size: 23px;
+  line-height: 1.2em;
+  text-align: center;
+  box-sizing: border-box;
+  min-width: $main-min-width;
+  max-width: $main-max-width;
+  margin: 0 auto;
+  padding-bottom: 200px;
+
+  @media (max-width: $main-max-width) {
+    padding: 0 50px;
+  }
+
+  @media (max-width: $breakpoint-tablet-width) {
+    padding: 0 20px;
+  }
+
+  @media (max-width: $breakpoint-mobile-width) {
+    padding: 0 10px;
+  }
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
+  > * {
+    width: 100%;
+  }
+}

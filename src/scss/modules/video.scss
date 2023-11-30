@@ -1,0 +1,34 @@
+@import '../variables';
+@import '../mixins';
+
+.video {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 100px 0 -40px;
+  overflow: hidden;
+
+  &--smaller-margin {
+    margin-top: -50px;
+  }
+
+  @media (max-width: $breakpoint-mobile-width) {
+    margin: 100px 0;
+  }
+
+  &__container {
+    width: calc(50% - 10px);
+
+    @media (max-width: $breakpoint-mobile-width) {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+  }
+
+  &__video {
+    width: 100%;
+    display: block;
+    transform: scale(101%);
+  }
+}

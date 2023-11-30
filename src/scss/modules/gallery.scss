@@ -1,0 +1,86 @@
+@import '../variables';
+@import '../mixins';
+
+.gallery {
+  margin: 100px 0;
+  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: $breakpoint-laptop-width) {
+    padding: 80px 30px;
+
+    margin: 50px 0;
+  }
+
+  @media (max-width: $breakpoint-mobile-width) {
+    padding: 50px 0;
+  }
+
+  &--background-photo-1 {
+    background: url(../assets/images/background-1.jpg) center no-repeat;
+    background-size: cover;
+  }
+
+  &--background-photo-2 {
+    background: url(../assets/images/background-2.jpg) center no-repeat;
+    background-size: cover;
+  }
+
+  &__photo {
+    width: 27%;
+    margin: 20px;
+
+    @media (max-width: $breakpoint-laptop-width) {
+      margin: 10px;
+    }
+
+    @media (max-width: $breakpoint-mobile-width) {
+      width: 29%;
+      margin: 5px;
+    }
+
+    &--2 {
+      width: 36%;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: clamp(12px, 4vw, 44px);
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2em;
+    color: $green;
+    margin-top: 8px;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__link {
+    font-size: clamp(11px, 3.5vw, 30px);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $green;
+    display: inline-block;
+    margin-top: 25px;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      margin-top: 10px;
+    }
+  }
+
+  &__soon {
+    font-size: 9px;
+    color: white;
+  }
+}

@@ -1,0 +1,65 @@
+@import '../variables';
+@import '../mixins';
+
+.animated-text {
+  margin: 100px 0;
+  position: relative;
+  min-height: 100px;
+
+  @media (max-width: $breakpoint-mobile-width) {
+    margin: 50px 0;
+  }
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: calc((50vw - 550px) * -1);
+    width: 100vw;
+    overflow: hidden;
+
+    @media (max-width: $main-max-width) {
+      left: -50px;
+    }
+    @media (max-width: $breakpoint-tablet-width) {
+      left: -20px;
+    }
+    @media (max-width: $breakpoint-mobile-width) {
+      left: -10px;
+    }
+  }
+
+  &__container {
+    width: 300%;
+    display: flex;
+    justify-content: space-around;
+    animation: animated-text 20s linear infinite;
+
+    &--reverse {
+      animation: animated-text 20s linear infinite reverse;
+    }
+
+    @media (max-width: $breakpoint-tablet-width) {
+      width: 600%;
+    }
+  }
+
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.7vw;
+
+    @media (max-width: $breakpoint-tablet-width) {
+      font-size: 5.3vw;
+    }
+  }
+}
+
+@keyframes animated-text {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-66.66%);
+  }
+}

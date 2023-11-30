@@ -1,0 +1,13 @@
+@import '../variables';
+@import '../mixins';
+
+.title {
+  width: 100%;
+
+  &__item {
+    font-size: clamp(14px, 4vw, 43px);
+    font-weight: bold;
+    line-height: 1.3em;
+    margin: 0 0 80px;
+  }
+}

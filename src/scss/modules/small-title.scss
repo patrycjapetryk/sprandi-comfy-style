@@ -1,0 +1,15 @@
+@import '../variables';
+@import '../mixins';
+
+.small-title {
+  width: 100%;
+
+  &__item {
+    font-size: 9px;
+    font-weight: normal;
+    line-height: 1.4em;
+    text-align: left;
+    margin: 6px 0 45px;
+    max-width: 250px;
+  }
+}

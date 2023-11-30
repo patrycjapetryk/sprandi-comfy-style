@@ -1,0 +1,69 @@
+@import '../variables';
+@import '../mixins';
+
+.kids {
+  margin: 200px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media (max-width: $breakpoint-mobile-width) {
+    margin: 100px 0;
+    padding: 0 20px;
+  }
+
+  &__title {
+    width: 100%;
+    font-size: clamp(14px, 10vw, 100px);
+    font-weight: bold;
+    color: $green;
+    margin: 0 0 140px;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      margin: 0 0 80px;
+    }
+  }
+
+  &__photo {
+    width: 22%;
+    margin: 0;
+    margin-bottom: 30px;
+
+    @media (max-width: $breakpoint-mobile-width) {
+      width: 34%;
+    }
+
+    &--1 {
+      transform: rotateZ(-30deg);
+
+      &:hover {
+        transform: rotateZ(-40deg);
+      }
+
+      @media (max-width: $breakpoint-mobile-width) {
+        transform: rotateZ(-10deg);
+      }
+    }
+
+    &--2 {
+      transform: rotateZ(20deg);
+
+      &:hover {
+        transform: rotateZ(10deg);
+      }
+    }
+
+    &--3 {
+      transform: rotateZ(-10deg);
+
+      &:hover {
+        transform: rotateZ(-5deg);
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    display: block;
+  }
+}
