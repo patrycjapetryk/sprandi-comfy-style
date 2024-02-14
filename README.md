@@ -5,7 +5,7 @@
 
 Landing Page for Sprandi, a Polish fashion brand, part of CCC group. It was built using Vanilla JS, SCSS, and Vite.
 
-- **Online version**: [[Open live demo]](https://jf-midday-cocktail.netlify.app/)
+- **Online version**: [[Open live demo]](https://sprandi-comfy-style.netlify.app)
 
 &nbsp;
 
